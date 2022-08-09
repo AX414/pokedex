@@ -12,21 +12,9 @@ link: https://www.youtube.com/watch?v=SjtdH3dWLa8
 }
 
 body{
-    background-size: cover;
     background-attachment: fixed;
     text-align: center;
     min-height: 100vh;
-}
-
-@media (max-width: 750px) {
-    #background-video {
-        display: none;
-    }
-
-    body {
-        background: url("https://assets.codepen.io/6093409/river.jpg") no-repeat;
-        background-size: cover;
-    }
 }
 
 /* video background */
@@ -46,6 +34,11 @@ main{
     display: inline-block;
     padding: 15px;
     position: relative;
+    left: -20%;
+}
+
+h2{
+    color:black;
 }
 
 .pokedex{
@@ -61,47 +54,6 @@ main{
     height: 13%;
 }
 
-
-/*.pokedex_screen{
-    position: absolute;
-    left:53.8%;
-    bottom: 64.5%;
-    transform: translate(-63%,20%);
-    background-color: yellowgreen;
-    padding-left: 112px;
-    padding-right: 112px;
-    padding-top: 24%;
-    border-radius: 5px;
-    border: 2px solid #333;
-    border-color: yellowgreen;
-}
-
-h3{
-    position: absolute;
-    left:53.8%;
-    bottom: 86.7%;
-    transform: translate(-63%, 20%);
-    background-color: #fbeb64;
-    color: #3a444d;
-    text-transform: capitalize;
-    padding-left: 92px;
-    padding-right: 92px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.image_box{
-    position: absolute;
-    left:42.9%;
-    bottom: 68%;
-    transform: translate(-63%,20%);
-    background-color: #fbeb64;
-    padding: 48px;
-    border-radius: 5px;
-    border: 2px solid #333;
-    border-color: #fbeb62;
-}*/
-
 .pokemon_data{
     position:absolute;
     font-weight: 600;
@@ -116,10 +68,23 @@ h3{
     text-transform: capitalize;
 }
 
+.pokemon_description{
+    position: absolute;
+    display: inline-block;
+    top: 4%;
+    padding: 15%;
+    right: 5%;
+    font-size: clamp(5px, 3vw, 20px);
+    outline: none;
+    border: 2px solid #333;
+    background-color: turquoise;
+    border-radius: 5px;
+}
+
 .form{
     position: absolute;
     width: 65%;
-    top: 65%;
+    top: 70%;
     left: 13.5%;
 }
 
@@ -145,6 +110,18 @@ h3{
     gap: 20px;
 }
 
+.audio-buttons{
+    position: absolute;
+    display: inline-flex;
+    bottom: 90%;
+    left: 10%;
+    width: 65%;
+    transform: translate(-57%, 0);
+    display: flex;
+    gap: 20px;
+}
+
+
 .button{
     width: 50%;
     padding: 4%;
@@ -160,4 +137,46 @@ h3{
 .button:active{
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    main{
+        padding: 0px;
+        left: 0;
+        transform: translate(0%,5%);
+    }
+    
+    .button{
+        width: 50%;
+        font-size: clamp(6px, 4vw, 1rem);
+    }
+
+    .pokemon_description{
+        position: absolute;
+        margin-top: 100%;
+        bottom: 10%;
+        padding: 20%;
+        right: 18%;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px) {
+
+
+    main{
+        padding: 0;
+        left: 0;
+        margin-top: 60%;
+        transform: translate(0%,-15%);
+    }
+    
+    .button{
+        width: 50%;
+        font-size: clamp(6px, 4vw, 1rem);
+    }
+
+    
 }
